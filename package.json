@@ -1,0 +1,16 @@
+{
+  "name": "expo-huma-monorepo-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Expo + Huma monorepo template",
+  "scripts": {
+    "dev:server": "cd apps/server && go run .",
+    "dev:mobile": "pnpm --filter mobile start",
+    "dev:android": "pnpm --filter mobile android",
+    "dev:ios": "pnpm --filter mobile ios",
+    "gen:openapi": "./scripts/gen-openapi.sh",
+    "gen:types": "pnpm --filter api-client run generate",
+    "gen:api": "pnpm run gen:openapi && pnpm run gen:types"
+  },
+  "packageManager": "pnpm@10.30.3"
+}

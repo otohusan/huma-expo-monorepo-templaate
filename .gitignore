@@ -1,0 +1,39 @@
+# --- Node.js ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- Expo / React Native ---
+.expo/
+dist/
+node_modules/
+npm-debug.log
+*.jks
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# --- Go ---
+bin/
+main
+out/
+
+# --- IDE / OS ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# --- Environment Variables ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- API Client (generated) ---
+packages/api-client/schema.d.ts
