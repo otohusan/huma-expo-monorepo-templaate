@@ -1,0 +1,22 @@
+{
+  "name": "api-client",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shared typed API client",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "scripts": {
+    "generate": "openapi-typescript ./schema.json -o ./schema.d.ts"
+  },
+  "packageManager": "pnpm@10.30.3",
+  "dependencies": {
+    "openapi-fetch": "^0.17.0"
+  },
+  "devDependencies": {
+    "openapi-typescript": "^7.13.0",
+    "typescript": "^5.9.3"
+  }
+}
