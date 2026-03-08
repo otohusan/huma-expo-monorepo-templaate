@@ -1,6 +1,6 @@
 # expo-huma-monorepo-template
 
-Expo (mobile) + Huma (Go API) + pnpm workspace + mise を使ったモノレポテンプレートです。  
+Expo (mobile) + Huma (Go API) 使ったモノレポテンプレートです。  
 OpenAPI スキーマを Go サーバーから取得し、TypeScript 型を自動生成して `mobile` から型安全に利用できます。
 
 ## 1. このテンプレでできること
@@ -15,7 +15,7 @@ OpenAPI スキーマを Go サーバーから取得し、TypeScript 型を自動
 ```mermaid
 flowchart LR
   M[apps/mobile<br/>Expo] -->|import| C[packages/api-client]
-  C -->|GET /greeting/{name}| S[apps/server<br/>Go + Huma]
+  C -->|"GET /greeting/{name}"| S[apps/server<br/>Go + Huma]
   S -->|/openapi.json| G[scripts/gen-openapi.sh]
   G -->|schema.json| C
   C -->|openapi-typescript| T[schema.d.ts]
@@ -174,5 +174,3 @@ export const client = createApiClient(baseUrl);
 ## 10. 今後の拡張候補
 
 - Docker (`apps/server` 用 `Dockerfile`, ルート `compose.yml`)
-- `apps/web` 追加
-- `api-client` の認証ヘッダ/リトライ制御
